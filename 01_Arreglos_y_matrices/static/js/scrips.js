@@ -54,7 +54,7 @@ Suma ambos valores y muestra el resultado con un alert() que explique qué posic
 
 function sumaMatrices(){
     let matriz = [
-        [10, 20]
+        [10, 20],
         [30, 40]
     ];
     let suma = matriz[0][0] + matriz[1][1]
