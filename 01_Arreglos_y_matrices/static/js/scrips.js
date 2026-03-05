@@ -58,7 +58,7 @@ function sumaMatrices(){
         [30, 40]
     ];
     let suma = matriz[0][0] + matriz[1][1]
-    alert (`suma de ${matriz[0][0]} y ${matriz[1][1]} da un total de ${suma}`);
+    alert(`suma de ${matriz[0][0]} y ${matriz[1][1]} da un total de ${suma}`);
 }
 
 /*  Ejercicio 5: El Intruso en la Tercera Dimensión
@@ -82,7 +82,7 @@ function traducirAcciones(){
     let sujeto = ["El programador", "La computadora"]
     let verbos = [["codifica", "analiza"], ["fallar", "reiniciar"]];
 
-    alert(`${sujetos[0]} ${verbosÑ[0][1]}`);
+    alert(`${sujeto[0]} ${verbos[0][1]}`);
 }
 
 /*  Ejercicio 7: Limpieza de Datos (Pop y Unshift)
