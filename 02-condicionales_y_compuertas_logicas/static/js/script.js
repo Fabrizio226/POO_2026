@@ -19,7 +19,7 @@ function ValiEdad(){
     }
 }
 
-// ejercicio 2
+// ejercicio 2 js
 
 function filaEspera(){
     let nombre = prompt("Ingrese su nombre");
