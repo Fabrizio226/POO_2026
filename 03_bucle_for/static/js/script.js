@@ -141,4 +141,20 @@ Tienes una lista de temperaturas registradas en una sala de servidores: let temp
 Queremos mostrar alertas solo para las temperaturas peligrosas.
 Usa .innerHTML en lugar de .textContent en tu párrafo. */
 
+function generaAdvertencias(){
+    let temperaturas = [22, 24, 28, 35, 21, 38];
+    let temperaturasPeligrosas = [];
+
+    const container8 = document.getElementById('container8');
+    const result8 = document.getElementById('result8');
+
+    for (i = 0; i < temperaturas.length; i++){
+        if(temperaturas[i] >= 30 && temperaturas[i] < 50) {
+            result8.innerHTML += 
+            `<p class="text-danger">¡ALERTA! temperatura critica
+            de ${temperaturas[i]} grados.</p><br>`;
+        }
+        container8.classList.remove(`d-none`)
+    }
+}
 
