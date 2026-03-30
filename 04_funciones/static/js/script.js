@@ -96,7 +96,7 @@ function verificarCodigo() {
 function calcularCuotas(valor, cuota){
     let registroPagos = "";
     for(let i = 1; i <= 3; i++) {
-        registroPagos += `Cuota ${cuota}: ${valor/3}`;
+        registroPagos += `Cuota ${i} de ${cuota}: ${parseInt(valor/3)} |}`;
     }
     return registroPagos;
 };
@@ -110,10 +110,42 @@ function simularCuotas() {
     const container = document.getElementById("container5");
     let resultado = calcularCuotas(valorProducto,cuota)
     result.textContent = resultado;
-    producto.value 
+    producto.value = "";
+    cuotaInput.value = "";
+    container.classList.remove("d-none")
 }
 
 // ejercicio 6
+
+let vitrina = [2500, 15000, 8000, 30000, 5000];
+let opciones = [];
+function ComprobarPresupuesto(presupuesto) {
+    for (let i = 0; i <= vitrina.length; i++) {
+        if (presupuesto >= vitrina[i]) {
+            opciones.push(vitrina[i]);
+        }
+    }
+    if (opciones == "") {
+        return "No te alcanza para nada";
+    } else {
+        return `Te alcanza para los precios: ${opciones.join(" - ")}`
+    }
+}
+function filtrarPrecios() {
+    let input = document.getElementById("input6");
+    const result = document.getElementById("result6");
+    const container = document.getElementById("container6");
+    let dinero = parseInt(input.value);
+    if (isNaN(dinero)) {
+        alert("Ingresa valores válidos.");
+    } else {
+        let resultado = ComprobarPresupuesto(dinero);
+        result.textContent = resultado;
+        input.value = "";
+        container.classList.remove("d-none")
+        opciones = [];
+    }
+}
 
 // ejercicio 7
 
